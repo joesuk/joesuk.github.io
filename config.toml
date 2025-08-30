@@ -15,3 +15,8 @@ logo = "logo.png"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# change the location of the image cache to the cacheDir
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
