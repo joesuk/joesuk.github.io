@@ -1,0 +1,17 @@
+baseURL = "joesuk.github.io"
+#relativeURLs = true
+languageCode = 'en-us'
+title = 'Joe Suk'
+theme = 'lugo'
+canonifyURLs = true
+
+ # Navigation
+[params.navigation]
+#other stuff
+logo = "logo.png"
+
+# markup stuff needed for html
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
