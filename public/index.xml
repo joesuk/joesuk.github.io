@@ -1,64 +1,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Joe Suk</title>
-	<link>http://localhost:1313/~js5338/</link>
+	<link>joesuk.github.io/</link>
 	<description>Recent content on Joe Suk</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
     
-        <atom:link href="http://localhost:1313/~js5338/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="joesuk.github.io/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>
 		<title>Core Competency Review Sessions</title>
-		<link>http://localhost:1313/~js5338/review/</link>
+		<link>joesuk.github.io/review/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1313/~js5338/review/</guid>
-		<description>&lt;h3 id=&#34;previous-exams&#34;&gt;Previous exams:&lt;/h3&gt;
+		<guid>joesuk.github.io/review/</guid>
+		<description>&lt;hr&gt;
+&lt;h3 id=&#34;previous-exams&#34;&gt;Previous exams:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/practice_exam.pdf&#34;&gt;2018 Practice Exam&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-Sept-18.pdf&#34;&gt;Sept 2018&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-May-19.pdf&#34;&gt;May 2019&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-Sept-19.pdf&#34;&gt;Sept 2019&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-May-20.pdf&#34;&gt;May 2020&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-Sept-20.pdf&#34;&gt;Sept 2020&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-May-21.pdf&#34;&gt;May 2021&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-Sept-21.pdf&#34;&gt;Sept 2021&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/Exam-June-22.pdf&#34;&gt;June 2022&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/june22_solutions.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/practice_exam.pdf&#34;&gt;2018 Practice Exam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-Sept-18.pdf&#34;&gt;Sept 2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-May-19.pdf&#34;&gt;May 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-Sept-19.pdf&#34;&gt;Sept 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-May-20.pdf&#34;&gt;May 2020&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-Sept-20.pdf&#34;&gt;Sept 2020&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-May-21.pdf&#34;&gt;May 2021&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-Sept-21.pdf&#34;&gt;Sept 2021&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/Exam-June-22.pdf&#34;&gt;June 2022&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/june22_solutions.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;review-sheets&#34;&gt;Review sheets:&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_1.pdf&#34;&gt;Linear Algebra&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_1.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_2.pdf&#34;&gt;Random Variables and Transformations&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_2.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_3.pdf&#34;&gt;Multiple Random Variables&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_3.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_4.pdf&#34;&gt;Multivariate Gaussians and Random Samples&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_4.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_5.pdf&#34;&gt;Stochastic Convergence&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_5.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_6.pdf&#34;&gt;Point Estimation&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_6.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_7.pdf&#34;&gt;Hypothesis Testing&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_7.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_doc_8.pdf&#34;&gt;Asymptotics of Tests and Estimators&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/review_sol_8.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_1.pdf&#34;&gt;Linear Algebra&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_1.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_2.pdf&#34;&gt;Random Variables and Transformations&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_2.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_3.pdf&#34;&gt;Multiple Random Variables&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_3.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_4.pdf&#34;&gt;Multivariate Gaussians and Random Samples&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_4.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_5.pdf&#34;&gt;Stochastic Convergence&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_5.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_6.pdf&#34;&gt;Point Estimation&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_6.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_7.pdf&#34;&gt;Hypothesis Testing&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_7.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/review_doc_8.pdf&#34;&gt;Asymptotics of Tests and Estimators&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/review_sol_8.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;To see the source tex for any of the review docs/solutions above, replace the &amp;ldquo;pdf&amp;rdquo; suffix in each URL with &amp;ldquo;tex&amp;rdquo;. You&amp;rsquo;ll also need the following &lt;a href=&#34;http://localhost:1313/~js5338/assets/review_preamble.tex&#34;&gt;preamble&lt;/a&gt; and &lt;a href=&#34;http://localhost:1313/~js5338/assets/joe_macros.sty&#34;&gt;style file&lt;/a&gt; in the same directory to compile.&lt;/p&gt;
+&lt;p&gt;To see the source tex for any of the review docs/solutions above, replace the &amp;ldquo;pdf&amp;rdquo; suffix in each URL with &amp;ldquo;tex&amp;rdquo;. You&amp;rsquo;ll also need the following &lt;a href=&#34;joesuk.github.io/assets/review_preamble.tex&#34;&gt;preamble&lt;/a&gt; and &lt;a href=&#34;joesuk.github.io/assets/joe_macros.sty&#34;&gt;style file&lt;/a&gt; in the same directory to compile.&lt;/p&gt;
 &lt;h3 id=&#34;other-review-materials&#34;&gt;Other review materials:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Exams/review from STAT 4204: Statistical Inference:
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/final_S2020.pdf&#34;&gt;Final&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/final_solution.pdf&#34;&gt;solution&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/practice_problems.pdf&#34;&gt;Practice problems&lt;/a&gt; (&lt;a href=&#34;http://localhost:1313/~js5338/assets/practice_problems_solutions.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/final_S2020.pdf&#34;&gt;Final&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/final_solution.pdf&#34;&gt;solution&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/practice_problems.pdf&#34;&gt;Practice problems&lt;/a&gt; (&lt;a href=&#34;joesuk.github.io/assets/practice_problems_solutions.pdf&#34;&gt;solutions&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/~js5338/assets/EigenvaluesFacts.pdf&#34;&gt;Facts about eigenvalues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/assets/EigenvaluesFacts.pdf&#34;&gt;Facts about eigenvalues&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
 	</item>
 	
 	<item>
 		<title>Differential Privacy in the US Census</title>
-		<link>http://localhost:1313/~js5338/podcast/</link>
+		<link>joesuk.github.io/podcast/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 		
-		<guid>http://localhost:1313/~js5338/podcast/</guid>
-		<description>&lt;p&gt;I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.&lt;/p&gt;
+		<guid>joesuk.github.io/podcast/</guid>
+		<description>&lt;hr&gt;
+&lt;p&gt;I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.&lt;/p&gt;
 &lt;h3 id=&#34;relevant-links-and-sources&#34;&gt;Relevant Links and Sources:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=pT19VwBAqKA&#34;&gt;Protecting Privacy with MATH&lt;/a&gt;: YouTube explanation of differential privacy by Minute Physics.&lt;/li&gt;
@@ -160,6 +162,132 @@
 &lt;p&gt;&lt;strong&gt;David&lt;/strong&gt;: Yeah, yeah. So my name is Dave Van Riper. I&amp;rsquo;m the director of spatial analysis at the Minnesota population center. My boss, Steve Ruggles has been one of the other leading critics of differential privacy. And I&amp;rsquo;m going to give him credit for giving me the space to spend the last almost two years really taking a deep dive and writing and talking about this. You can find at @dcvanriper on Twitter. And if you go to nhgis.org, we create tabulations from the demonstration data that the Census Bureau puts out, and you can download that and compare the differentially private counts versus the published counts from 2010 to see, you know, how different the statistics are. And so we&amp;rsquo;re working with the Census Bureau to construct those to help the end user.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Joe&lt;/strong&gt;: Okay, great. Thank you.&lt;/p&gt;
 &lt;/details&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Joe Suk</title>
+		<link>joesuk.github.io/misc/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>joesuk.github.io/misc/</guid>
+		<description>&lt;hr&gt;
+&lt;h3 id=&#34;misc&#34;&gt;Misc.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;joesuk.github.io/podcast&#34;&gt;Interview&lt;/a&gt; on differential privacy in US census (a final project for &amp;ldquo;Communicating Data &amp;amp; Statistics&amp;rdquo; class at Columbia)&lt;/li&gt;
+&lt;li&gt;This site is made using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, a static site generator. &lt;a href=&#34;https://github.com/joesuk/website&#34;&gt;Here&lt;/a&gt; are config and source files.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Joe Suk</title>
+		<link>joesuk.github.io/papers/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>joesuk.github.io/papers/</guid>
+		<description>&lt;hr&gt;
+&lt;h3 id=&#34;preprints-and-publications&#34;&gt;Preprints and Publications&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2510.08539&#34;&gt;On the Optimization Dynamics of RLVR: Gradient Gap and Step Size Thresholds&lt;/a&gt;.&lt;br&gt;
+Joe Suk, Yaqi Duan.&lt;br&gt;
+&lt;em&gt;NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An Efficient Variant of One-Class SVM with Lifelong Online Learning Guarantees.&lt;br&gt;
+Joe Suk, Samory Kpotufe.&lt;br&gt;
+&lt;em&gt;Preprint in Preparation&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2502.00108&#34;&gt;Tracking Most Significant Shifts in Infinite-Armed Bandits&lt;/a&gt;&lt;br&gt;
+Joe Suk, Jung-hun Kim.&lt;br&gt;
+&lt;em&gt;ICML 2025&lt;/em&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/joesuk/NonStationaryInfiniteBandits&#34;&gt;[code]&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2407.08654.pdf&#34;&gt;Adaptive Smooth Non-Stationary Bandits&lt;/a&gt;&lt;br&gt;
+Joe Suk.&lt;br&gt;
+&lt;em&gt;SIAM Journal on Mathematics of Data Science (SIMODS)&lt;/em&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/joesuk/SmoothBandits&#34;&gt;[code]&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://openreview.net/pdf?id=KZRnDZ70M2&#34;&gt;Non-Stationary Dueling Bandits Under a Weighted Borda Criterion&lt;/a&gt;&lt;br&gt;
+Joe Suk, Arpit Agarwal.&lt;br&gt;
+&lt;em&gt;Transactions on Machine Learning Research (TMLR)&lt;/em&gt; (&amp;ldquo;Featured Certification&amp;rdquo;, ICLR 2025 Journal-to-Conference Track).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2302.06595.pdf&#34;&gt;When Can We Track Significant Preference Shifts in Dueling Bandits?&lt;/a&gt;&lt;br&gt;
+Joe Suk, Arpit Agarwal.&lt;br&gt;
+&lt;em&gt;NeurIPS 2023&lt;/em&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/joesuk/nonstationary-duel&#34;&gt;[code]&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2307.05341.pdf&#34;&gt;Tracking Most Significant Shifts in Nonparametric Contextual Bandits&lt;/a&gt;&lt;br&gt;
+Joe Suk, Samory Kpotufe.&lt;br&gt;
+&lt;em&gt;NeurIPS 2023&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2112.13838.pdf&#34;&gt;Tracking Most Significant Arm Switches in Bandits&lt;/a&gt;&lt;br&gt;
+Joe Suk, Samory Kpotufe.&lt;br&gt;
+&lt;em&gt;COLT 2022&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2007.08584.pdf&#34;&gt;Self-Tuning Bandits over Unknown Covariate-Shifts&lt;/a&gt;&lt;br&gt;
+Joe Suk, Samory Kpotufe.&lt;br&gt;
+&lt;em&gt;ALT 2021&lt;/em&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/joesuk/bandits_cov_shifts&#34;&gt;[code]&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1710.10867.pdf&#34;&gt;Factorizations of &lt;em&gt;k&lt;/em&gt;-Nonnegative Matrices&lt;/a&gt;&lt;br&gt;
+($\alpha$&amp;ndash;$\beta$) Sunita Chepuri, Neeraja Kulkarni, Joe Suk, Ewin Tang.&lt;br&gt;
+&lt;em&gt;Journal of Combinatorics&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1710.06517.pdf&#34;&gt;Dihedral Sieving Phenomena&lt;/a&gt;&lt;br&gt;
+($\alpha$&amp;ndash;$\beta$) Sujit Rao, Joe Suk.&lt;br&gt;
+&lt;em&gt;Discrete Mathematics&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Joe Suk</title>
+		<link>joesuk.github.io/teaching/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>joesuk.github.io/teaching/</guid>
+		<description>&lt;hr&gt;
+&lt;h2 id=&#34;teaching&#34;&gt;Teaching&lt;/h2&gt;
+&lt;p&gt;As teaching assistant/grader:&lt;/p&gt;
+&lt;h3 id=&#34;columbia-university&#34;&gt;Columbia University&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Statistics Department:
+&lt;ul&gt;
+&lt;li&gt;Probability and Statistics for Data Science (Fall 2018)&lt;/li&gt;
+&lt;li&gt;Intro to Statistical Reasoning (Spring 2019, Fall 2019, Spring 2020)&lt;/li&gt;
+&lt;li&gt;Probability Theory (Summer 2019, Summer 2021, Summer 2022)&lt;/li&gt;
+&lt;li&gt;Statistical Inference (Summer 2020)&lt;/li&gt;
+&lt;li&gt;Bayesian Statistics (Spring 2021)&lt;/li&gt;
+&lt;li&gt;Advanced Data Analysis (Fall 2021, Spring 2022, Fall 2022)&lt;/li&gt;
+&lt;li&gt;Topics in Modern Statistics: Statistical Graphics (Spring 2023)&lt;/li&gt;
+&lt;li&gt;Statistical Inference and Modeling (Fall 2023)&lt;/li&gt;
+&lt;li&gt;Stochastic Methods in Finance (Spring 2024)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mathematics Department:
+&lt;ul&gt;
+&lt;li&gt;Intro to Modern Analysis I (Summer 2020)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also designed and taught &lt;a href=&#34;joesuk.github.io/review&#34;&gt;review sessions&lt;/a&gt; for the Columbia Statistics PhD core competency qualifying exam.&lt;/p&gt;
+&lt;h3 id=&#34;stony-brook-university&#34;&gt;Stony Brook University&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MAT 331 - Mathematical Problem Solving with Computers (Fall 2017)&lt;/li&gt;
+&lt;li&gt;MAT 351 - Differential Equations: Dynamics and Change (Spring 2017)&lt;/li&gt;
+&lt;/ul&gt;
 </description>
 	</item>
 	

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/~js5338/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=~js5338/livereload" data-no-instant defer></script>
-	<link rel="shortcut icon" type="image/png" href="http://localhost:1313/~js5338/favicon.png">
-	<link rel="shortcut icon" sizes="192x192" href="http://localhost:1313/~js5338/favicon.png">
+<head>
+	<link rel="shortcut icon" type="image/png" href="joesuk.github.io/favicon.png">
+	<link rel="shortcut icon" sizes="192x192" href="joesuk.github.io/favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 
 
 	<title>Tags</title>
-	<link rel="canonical" href="http://localhost:1313/~js5338/">
-	<link rel='alternate' type='application/rss+xml' title="Joe Suk RSS" href='http://localhost:1313/~js5338/index.xml'>
-	<link rel='stylesheet' type='text/css' href='http://localhost:1313/~js5338/style.css'>
+	<link rel="canonical" href="joesuk.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="Joe Suk RSS" href='joesuk.github.io/index.xml'>
+	<link rel='stylesheet' type='text/css' href='joesuk.github.io/style.css'>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
@@ -21,11 +21,158 @@
             {left: '$', right: '$', display: false}
           ]
         });"></script>
-	<link rel="icon" href="http://localhost:1313/~js5338/favicon.ico">
+	<link rel="icon" href="joesuk.github.io/favicon.ico">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta charset="utf-8">
+
+	
+	<style>
+	header h1 a {
+	  color: #57068c !important;
+	  text-decoration: none !important;
+	  transition: color 0.2s !important;
+	}
+	header h1 a:hover {
+	  color: #228065 !important;
+	}
+			h1 a {
+	  color: #57068c;
+	  text-decoration: none;
+	  transition: color 0.2s;
+	}
+	h1 a:hover {
+	  color: #228065;
+	}
+	  .faicon {
+	    font-size: 2.5rem;
+	    color: #57068c;
+	  }
+	  .faicon:hover {
+	    color: #228065;
+	  }
+	  .social-icons {
+	    display: flex;
+	    gap: 1rem;
+	    align-items: center;
+	  }
+	  .social-icons a {
+	    text-decoration: none;
+	  }
+	  .header-nav {
+	    display: flex;
+	    gap: 0.3rem;
+	    align-items: center;
+	  }
+	  .header-nav a {
+	    text-decoration: none;
+	    color: #57086c;
+	    font-weight: bold;
+	    padding: 0.3rem 0.6rem;
+	    border-radius: 4px;
+	    transition: background-color 0.2s;
+	    font-size: 1.5rem;
+	  }
+	  .header-nav a:hover {
+	    background-color: #f0f0f0;
+	    color: #228065;
+	  }
+	</style>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+	 const navLinks = `
+	    <a href="joesuk.github.io/papers">papers</a>
+	    <a href="joesuk.github.io/teaching">teaching</a>
+	    <a href="joesuk.github.io/misc">misc</a>
+	  `;
+	  const socialIcons = `
+	    \x3C!--<a href="mailto:j.suk@nyu.edu">
+	      <span title="mailto link">
+	        <i class="fa-solid fa-envelope faicon"></i>
+	      </span>
+	    </a>-->
+	     <a href="mailto:j.suk@nyu.edu"
+     id="copyEmail"
+     data-email="j.suk@nyu.edu"
+     title="Copy email (⌘/Ctrl+click to open mail app)"
+     aria-label="Copy email address">
+    <i class="fa-solid fa-envelope faicon"></i>
+  </a>
+	      <a href="https://www.linkedin.com/in/joe-suk/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+    <i class="fa-brands fa-linkedin-in faicon"></i>
+		  </a>
+	    <a href="https://github.com/joesuk">
+	      <span title="my Github">
+	        <i class="fa-brands fa-github faicon"></i>
+	      </span>
+	    </a>
+	    \x3C!--<a href="https://instagram.com/ybjosuk" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener">
+  <i class="fa-brands fa-instagram faicon"></i>
+</a>-->
+	    <a href="https://scholar.google.com/citations?hl=en&user=972KeX4AAAAJ&view_op=list_works&sortby=pubdate">
+	    <span title="Google Scholar">
+	        <i class="ai ai-google-scholar-square ai-3a faicon"></i>
+	    </span>
+	    </a>
+	    \x3C!-- <a href="https://arxiv.org/a/suk_j_1.html">
+	    <span title="my arxiv">
+	        <i class="ai ai-arxiv ai-3x faicon"></i>
+	    </span>
+	    </a>-->
+	    <a href="joesuk.github.io/assets/Joe_Suk_cv.pdf">
+	    <span title="CV">
+	        <i class="ai ai-cv ai-3x faicon"></i>
+	    </span>
+	    </a>
+	  `;
+
+	  const navContainer = document.querySelector('.header-nav');
+	  const socialContainer = document.querySelector('.social-icons');
+
+	  if (navContainer) {
+	    navContainer.innerHTML = navLinks;
+	  }
+	  if (socialContainer) {
+	    socialContainer.innerHTML = socialIcons;
+	  }
+	if (socialContainer) {
+  socialContainer.innerHTML = socialIcons;
+
+  
+  const copyEl = document.getElementById('copyEmail');
+  if (copyEl) {
+    copyEl.addEventListener('click', async (e) => {
+      if (e.metaKey || e.ctrlKey) return; 
+      e.preventDefault();
+      const email = copyEl.dataset.email;
+
+      try {
+        await navigator.clipboard.writeText(email);
+        copyEl.title = 'Copied!';
+      } catch {
+        
+        const ta = document.createElement('textarea');
+        ta.value = email;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        copyEl.title = 'Copied!';
+      }
+
+      
+      setTimeout(() => (copyEl.title = 'Copy email (⌘/Ctrl+click to open mail app)'), 1500);
+    });
+  }
+}
+
+	});
+	</script>
+
 </head>
 <body>
 <main>
@@ -38,7 +185,7 @@
 </main>
 <footer>
 	
-	<a href="http://localhost:1313/~js5338/">Home</a><br><br>
+	<a href="joesuk.github.io/">Home</a><br><br>
 	
 </footer>
 </body>
