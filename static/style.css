@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root {
   --bg-pink: #fae3ea;
@@ -14,7 +14,7 @@ code {
 
 body {
   background-color: var(--bg-white)  !important;  /* #fae3ea #f7ebdb #ecf0f1 #e3bfd3 #cdadd9 #93ff8e #c09ec1 #964d94*/;
-/*font-family: 'Noto Sans', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
 font-family: Optima, Candara, Calibri, Arial, sans-serif;
 }
 
@@ -22,7 +22,7 @@ h1 {
 color: #000000;
 text-align: left;
 font-size: 50px;
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
 margin-bottom: 0px;
 margin-top: 1px;
 }
@@ -32,7 +32,7 @@ h2 {
   color: #000000 /*#5b5b5b /*#FFFFFF*/;
   text-align: left;
   font-size: 20px;
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 
@@ -44,7 +44,7 @@ h3 {
   color: #000000 /*#5b5b5b /*#FFFFFF*/;
   text-align: left;
   font-size: 20px;
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 
@@ -52,12 +52,12 @@ font-family: 'Noto Sans', sans-serif;
 p, ul, li {
   color:  #292929 /*#5b5b5b /*#FFFFFF*/;
   font-size: 20px;
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 a {
   color:  #57068c  /* #c90076 /* #3d85c6 /* #afbeff */;
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 a:hover {
@@ -143,52 +143,4 @@ nav ul, footer ul, #taglist {
 
 * {
   background-color: inherit !important;
-}
-
-/* --- from CHATGPT: Compact header spacing --- */
-header, .site-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;   /* was space-between elsewhere */
-  gap: 0.4rem;                   /* global horizontal spacing between groups */
-  flex-wrap: nowrap;
-}
-
-/* Title spacing */
-header h1 {
-  margin: 0;
-  margin-right: 0.5rem;          /* space between title and nav */
-  /* optional: scale down a bit so it doesn't force things apart */
-  font-size: clamp(28px, 4vw, 42px);
-}
-
-/* Nav spacing */
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;                  /* tighter space between nav links */
-}
-.header-nav a,
-.header-nav-link {
-  padding: 0.15rem 0.4rem;       /* slimmer padding than before */
-}
-
-/* Icons on the right */
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;                   /* tighter icon spacing */
-  margin-left: auto;             /* pushes icons to the right edge */
-}
-.social-icons .faicon {
-  font-size: 1.6rem;             /* slightly smaller to reduce visual width */
-}
-
-/* Even tighter on small screens */
-@media (max-width: 640px) {
-  header, .site-header { gap: 0.3rem; }
-  header h1 { margin-right: 0.4rem; }
-  .header-nav { gap: 0.3rem; }
-  .header-nav a, .header-nav-link { padding: 0.1rem 0.3rem; font-size: 0.95rem; }
-  .social-icons { gap: 0.3rem; }
 }
