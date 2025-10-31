@@ -4,7 +4,7 @@ defaultContentLanguage = "en"
 title = "Joe Suk"
 theme = "hugo-vitae"
 canonifyURLs = true
-
+publishDir = "docs"
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
