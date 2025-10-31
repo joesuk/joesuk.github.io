@@ -1,0 +1,22 @@
+baseURL = "joesuk.github.io"
+#relativeURLs = true
+languageCode = 'en-us'
+title = 'Joe Suk'
+theme = 'hugo-vitae'
+canonifyURLs = true
+
+# Navigation
+[params.navigation]
+#other stuff
+logo = "logo.png"
+
+# markup stuff needed for html
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# change the location of the image cache to the cacheDir
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

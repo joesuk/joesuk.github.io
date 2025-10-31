@@ -1,9 +1,11 @@
----
-title: "Differential Privacy in the US Census"
-layout: "minimal"
----
++++
+title = "Interview on Differential Privacy in the US Census"
+layout = "single"
+nodate = true
+nofeed = true
+hidden = false
++++
 
----
 
 I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.
 

@@ -1,0 +1,90 @@
+<header>
+  <div class="top-header-row">
+    {{- if .Site.Params.Avatar }}
+    <div id="avatar">
+      <a href="{{ .Site.BaseURL }}"><img src="{{ relURL .Site.Params.Avatar }}" alt="{{ .Site.Title }}"></a>
+    </div>
+    {{- end }}
+
+	  <div class="right-col">
+      <div id="titletext">
+        {{- if .IsHome }}
+          {{- if isset .Site.Params "subtitle" }}
+            <h1 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+          {{- else }}
+            <h1 id="titleonly"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+          {{- end }}
+        {{- else }}
+          {{- if isset .Site.Params "subtitle" }}
+            <h2 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+          {{- else }}
+            <h2 id="titleonly"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+          {{- end }}
+        {{- end }}
+      </div>
+
+      {{- if isset .Site.Params "subtitle" }}
+      <div id="title-description">
+        <p id="subtitle">{{ .Site.Params.Subtitle | markdownify }}</p>
+      </div>
+      {{- end }}
+
+
+      <!-- Social icons row lives here, always rendered -->
+      <div id="title-social">
+        <div id="social">
+          <nav>
+            <ul>
+              {{- if isset .Site.Params "social" }}
+                {{- range $index, $key := .Site.Params.social }}  <!-- use lowercase consistently -->
+                  {{- if $key.url }}
+                    <li>
+                      <a href="{{ $key.url | safeURL }}" rel="me" aria-label="{{ $key.name }}">
+                        <span title="{{ $key.name }}" class="icons {{ $key.icon }}" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                  {{- else if strings.HasPrefix $key.cmd "mailto:" }}
+                    <li>
+                      <a href="{{ $key.cmd | safeURL }}"
+                         data-email="{{ strings.TrimPrefix $key.cmd "mailto:" }}"
+                         class="email-copy"
+                         title="Copy email (⌘/Ctrl+click to open mail app)"
+                         aria-label="{{ $key.name }}">
+                        <span title="{{ $key.name }}" class="icons {{ $key.icon }}" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                  {{- else }}
+                    <li>
+                      <a href="{{ $key.cmd | safeURL }}" aria-label="{{ $key.name }}">
+                        <span title="{{ $key.name }}" class="icons {{ $key.icon }}" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                  {{- end }}
+                {{- end }}
+              {{- end }}
+
+              <li>
+                <button id="dark-mode" aria-label="Switch Dark Mode">
+                  <span title="Switch Dark Mode" class="icons fas fa-moon faicon" aria-hidden="true"></span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /title-social -->
+
+    </div> <!-- /right-col -->
+  </div> <!-- /top-header-row -->
+  {{- if isset .Site.Menus "main" }}
+  <div id="mainmenu">
+    <nav>
+      <ul>
+        {{- range .Site.Menus.main }}
+        <li><a href="{{ .URL | safeURL }}">{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+  {{- end }}
+</header>

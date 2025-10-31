@@ -1,0 +1,43 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Vitae"
+license = "GPL-3.0-or-later"
+licenselink = "https://codeberg.org/farooqkz/hugo-vitae/src/branch/main/COPYING"
+description = "Vitae is a feature-rich blog theme for Hugo that focuses on your content and supports RTL."
+homepage = "https://codeberg.org/farooqkz/hugo-vitae"
+tags = [
+  "blog",
+  "responsive",
+  "clean",
+  "simple",
+  "light",
+  "disqus",
+  "commento",
+  "mobile",
+  "customizable",
+  "minimalistic",
+  "typography",
+  "fontawesome",
+  "reading",
+  "rtl",
+  "persian",
+]
+features = [
+  "responsive",
+  "clean",
+  "disqus",
+  "commento",
+  "math",
+  "fontawesome",
+  "social-icons",
+  "customizable",
+  "RSS",
+  "rtl",
+]
+min_version = "0.62.0"
+
+authors = [
+  { name = "Farooq Karimi Zadeh", homepage = "https://far.chickenkiller.com" },
+  { name = "dataCobra", homepage = "https://thinkbot.de" },
+]

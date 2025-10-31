@@ -1,15 +1,14 @@
----
-title: "Joe Suk"
-layout: "single"
----
-
----
-
-## Teaching
++++
+title = "Teaching"
+layout = "single"
+nodate = true
+nofeed = true
+hidden = false
++++
 
 As teaching assistant/grader:
 
-### Columbia University
+# Columbia University
 
 - Statistics Department:
     * Probability and Statistics for Data Science (Fall 2018)
@@ -27,7 +26,7 @@ As teaching assistant/grader:
 I also designed and taught [review sessions](/review) for the Columbia Statistics PhD core competency qualifying exam.
 
 
-### Stony Brook University
+# Stony Brook University
 
 - MAT 331 - Mathematical Problem Solving with Computers (Fall 2017)
 - MAT 351 - Differential Equations: Dynamics and Change (Spring 2017)

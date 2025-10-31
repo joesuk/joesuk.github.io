@@ -1,14 +1,182 @@
-baseURL = "joesuk.github.io"
-#relativeURLs = true
-languageCode = 'en-us'
-title = 'Joe Suk'
-theme = 'lugo'
+BaseURL = "joesuk.github.io"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Joe Suk"
+theme = "hugo-vitae"
 canonifyURLs = true
 
- # Navigation
+
+pygmentsstyle = "colorful"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+googleAnalytics = ""
+
+[taxonomies]
+	tag = "tags"
+	category = "categories"
+	series = "series"
+
+[params]
+	# Enable dark mode as default
+	darkmode = false
+
+	# Use homepage.md instead of a list of posts
+	homepage = true
+
+	# Add meta keywords in head part (Site Keywords or Tags of Page)
+	keywords = ["hugo","vitae","theme","static"]
+
+	# Add meta description in head part
+	#description = " "
+
+	# Add pagetitle to homepage <title> tag
+	pagetitle = " "
+
+	# Add a subtitle to your website
+	#subtitle = ""
+
+	# Add math typesetting with KaTeX (Global with this Param)
+	math = true
+
+	# Optional 80x80 avatar image.
+	avatar = "img/me.jpeg"
+
+	# Optional favicons for website
+	#favicon = true
+
+	# Add list of sections that should show up on the homepage
+	#mainSections = ["post"]
+
+	# Add list of Sections/Types that should no be considered by RSS
+	#nofeedSections = ["post"]
+
+	# Deactivate Taxonomies for specific page types
+	#disableTaxoTypes = [""]
+
+	# Custom CSS applied to default styles. (Path could be "static/css/")
+	#customcss = "css/custom.css"
+
+	# Show reading time on a post
+	readingTime = false
+
+	# Show word count on a post
+	wordCount = false
+
+	# Show author on a post (groups with readingTime and wordCount)
+	hideAuthor = true
+
+# Custom JavaScript
+[params.customjs]
+# enable Javascript by setting to true
+enabled = false
+
+# add a filepath (could be "static/js/")
+#src = "js/main.js"
+
+# specifies which referrer information to send when fetching the script
+#referrerpolicy = "no-referrer"
+
+# specifies that the script should not be executed in browsers supporting ES2015 modules
+#nomodule = false
+
+# Allows a browser to check for integrity to ensure the code hasn't been manipulated
+#integrity= ""
+
+# execute the script when page has finished parsing (external only)
+#defer = true
+
+# sets the mode of the request to an http cors request
+#crossorigin=true
+
+# executes the script asynchronously (external only)
+#async = true
+
+# Comments
+[params.comments]
+# Enable Comments with "true"
+enabled = false
+
+# Comment provider:
+#   disqus (https://disqus.com)
+#   commento (https://commento.io)
+#   isso (https://isso-comments.de/)
+#engine = "disqus"
+
+# Content types to disable comments on.
+#disableOnTypes = ["page"]
+
+[params.comments.disqus]
+#shortname = "" # Paste the shortname from your Disqus dashboard.
+
+[params.comments.commento]
+#host = "" # Paste the domain of you commento.io system
+
+[params.comments.isso]
+#host = "" # Enter the domain of your Isso instance
+
+# Navigation
+[[menu.main]]
+name = "home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "papers"
+url = "/papers"
+weight = 2
+
+[[menu.main]]
+name = "teaching"
+url = "/teaching"
+weight = 3
+
+[[menu.main]]
+name = "misc"
+url = "/misc"
+weight = 4
+
+#[[menu.main]]
+#name = "Tags"
+#url = "/tags"
+#weight = 4
+#
+#[[menu.main]]
+#name = "Categories"
+#url = "/categories"
+#weight = 5
+
+# Social Menu
+
+[[params.social]]
+name = "Linkedin"
+icon = "fa-brands fa-linkedin-in faicon"
+url = "https://www.linkedin.com/in/joe-suk/"
+
+[[params.social]]
+name = "Github"
+icon = "fab fa-github faicon"
+url = "https://github.com/joesuk"
+
+[[params.social]]
+name = "Google Scholar"
+icon = "ai ai-google-scholar-square ai-3a faicon"
+url = "https://scholar.google.com/citations?hl=en&user=972KeX4AAAAJ&view_op=list_works&sortby=pubdate"
+
+[[params.social]]
+name = "CV"
+icon = "ai ai-cv ai-3x faicon"
+url = "/assets/Joe_Suk_cv.pdf"
+
+#[[params.social]]
+#name = "RSS"
+#icon = "fas fa-rss"
+#url = "index.xml"
+
+# Navigation
 [params.navigation]
 #other stuff
-logo = "logo.png"
+logo = "img/me.png"
 
 # markup stuff needed for html
 [markup]

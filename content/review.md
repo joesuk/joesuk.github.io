@@ -1,7 +1,10 @@
----
-title: "Core Competency Review Sessions"
-layout: "minimal"
----
++++
+title = "Core Competency Review Sessions"
+layout = "single"
+nodate = true
+nofeed = true
+hidden = false
++++
 
 ---
 ### Previous exams:

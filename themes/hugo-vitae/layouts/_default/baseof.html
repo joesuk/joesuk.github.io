@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" dir='{{ .Site.Params.LanguageDir | default "ltr" }}'>
+{{ partial "head.html" . -}}
+<script defer>
+
+
+const persianRegex = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF\u200B\u200D\u2060\u0020]/g;
+
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll(`
+    .markdown p,
+    .markdown h1,
+    .markdown h2,
+    .markdown h3,
+    .markdown h4,
+    .markdown h5,
+    .markdown h6,
+    .markdown li,
+    .markdown blockquote,
+    .markdown dd,
+    .markdown dt,
+    .markdown td,
+    .markdown th,
+    pre,
+    .post-header
+  `);
+
+
+  elements.forEach(el => {
+    if (!el.textContent) {
+      return;
+    }
+    const isFirstPersian = el.textContent[0].match(persianRegex) !== null;
+    const persianNumberOfLetterMatches = Array.from(el.textContent.matchAll(persianRegex)).length * (isFirstPersian ? 1.2 : 1.0);
+    const hasPersian = persianNumberOfLetterMatches >= (el.textContent.length / 2.0);
+
+    el.style.direction = hasPersian ? 'rtl' : 'ltr';
+    el.style.textAlign = hasPersian ? 'right' : 'left';
+
+    if (el.tagName.match(/^H[1-6]$/)) {
+      el.style.marginRight = hasPersian ? '1rem' : '-1';
+      el.style.marginLeft = hasPersian ? '0' : '1rem';
+    }
+  });
+});
+</script>
+<body>
+{{ partial "header.html" . -}}
+<main>
+{{- block "main" . }}{{- end }}
+</main>
+{{- partial "footer.html" . }}
+</body>
+</html>

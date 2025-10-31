@@ -1,12 +1,11 @@
----
-title: "Joe Suk"
-layout: "single"
----
++++
+title = "Preprints and Publications"
+layout = "index"
+nodate = true
+nofeed = true
+hidden = false
++++
 
----
-
-
-### Preprints and Publications
 1. [On the Optimization Dynamics of RLVR: Gradient Gap and Step Size Thresholds](https://arxiv.org/pdf/2510.08539).\
 Joe Suk, Yaqi Duan.\
 *NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models*
@@ -27,7 +26,8 @@ Joe Suk.\
 
 5. [Non-Stationary Dueling Bandits Under a Weighted Borda Criterion](https://openreview.net/pdf?id=KZRnDZ70M2)\
 Joe Suk, Arpit Agarwal.\
-*Transactions on Machine Learning Research (TMLR)* ("Featured Certification", ICLR 2025 Journal-to-Conference Track).
+*Transactions on Machine Learning Research (TMLR)*\
+("Featured Certification", ICLR 2025 Journal-to-Conference Track).
 
 6. [When Can We Track Significant Preference Shifts in Dueling Bandits?](https://arxiv.org/pdf/2302.06595.pdf)\
 Joe Suk, Arpit Agarwal.\

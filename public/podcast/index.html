@@ -1,219 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir='ltr'>
 <head>
 	<link rel="shortcut icon" type="image/png" href="joesuk.github.io/favicon.png">
 	<link rel="shortcut icon" sizes="192x192" href="joesuk.github.io/favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
+<meta charset="UTF-8">
+<title>Interview on Differential Privacy in the US Census | Joe Suk</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.150.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="hugo, vitae, theme, static">
+<link rel="stylesheet" type="text/css" media="screen" href="joesuk.github.io/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="joesuk.github.io/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="joesuk.github.io/css/all.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="joesuk.github.io/css/custom.css" />
+
+<script defer src="joesuk.github.io/js/jalali.js"  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="joesuk.github.io/css/katex.css" crossorigin="anonymous">
+<script defer src="joesuk.github.io/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="joesuk.github.io/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  renderMathInElement(
+    document.body,
+    {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ]
+    }
+  );
+});
+</script>
 
 
-	<title>Differential Privacy in the US Census</title>
-	<link rel="canonical" href="joesuk.github.io/">
-	<link rel='alternate' type='application/rss+xml' title="Joe Suk RSS" href='joesuk.github.io/index.xml'>
-	<link rel='stylesheet' type='text/css' href='joesuk.github.io/style.css'>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body, {
-          delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false}
-          ]
-        });"></script>
-	<link rel="icon" href="joesuk.github.io/favicon.ico">
-	<meta name="description" content="
-I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.
-Relevant Links and Sources:
 
-Protecting Privacy with MATH: YouTube explanation of differential privacy by Minute Physics.
-To Reduce Privacy Risks, the Census Plans to Report Less Accurate Data: by Mark Hansen, New York Times.
-Changes to the Census Could Make Small Towns Disappear: by David van Riper, New York Times Opinion.
-A History of Census Privacy Protections Timeline Graphic: by the US Census Bureau.
-2020 Census Data Products: Disclosure Avoidance Modernization: by the US Census Bureau.
-Balancing Data Utility and Confidentiality in the 2020 US Census: a living document by danah boyd.
-Democracy&rsquo;s Data Infrastructure: by Dan Bouk &amp; danah boyd, Knight Institute and Law and Political Economy Project.
-The American Census: A Social History: by Margo J. Anderson (2015). Yale University Press.
-Challenges to the Confidentiality of U.S. Federal Statistics,1910–1965: by Margo J. Anderson.
-Differntially Private Fair Learning: by Jagielski et al., Proceedings of the 36th International Conference on Machine Learning.
-Fair decision making using privacy-protected data: by Pujol et al., Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency.
-Trade-Offs between Fairness, Interpretability, and Privacy in Machine Learning by Sushant Agarwal.
 
-Interview Transcript
-Intro: The United States decennial census undertakes the grand and complicated mission of counting and surveying the nation&rsquo;s now over 300 million inhabitants. Conducted every ten years, the census hopes to capture the demographic fitness of this vast nation, tabulating the age, sex, race, and ethnicity of every individual from coast to coast, leaving hopefully no person unturned or uncounted or forgotten.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="index, follow">
-	<meta charset="utf-8">
 
-	
-	<style>
-	header h1 a {
-	  color: #57068c !important;
-	  text-decoration: none !important;
-	  transition: color 0.2s !important;
-	}
-	header h1 a:hover {
-	  color: #228065 !important;
-	}
-			h1 a {
-	  color: #57068c;
-	  text-decoration: none;
-	  transition: color 0.2s;
-	}
-	h1 a:hover {
-	  color: #228065;
-	}
-	  .faicon {
-	    font-size: 2.5rem;
-	    color: #57068c;
-	  }
-	  .faicon:hover {
-	    color: #228065;
-	  }
-	  .social-icons {
-	    display: flex;
-	    gap: 1rem;
-	    align-items: center;
-	  }
-	  .social-icons a {
-	    text-decoration: none;
-	  }
-	  .header-nav {
-	    display: flex;
-	    gap: 0.3rem;
-	    align-items: center;
-	  }
-	  .header-nav a {
-	    text-decoration: none;
-	    color: #57086c;
-	    font-weight: bold;
-	    padding: 0.3rem 0.6rem;
-	    border-radius: 4px;
-	    transition: background-color 0.2s;
-	    font-size: 1.5rem;
-	  }
-	  .header-nav a:hover {
-	    background-color: #f0f0f0;
-	    color: #228065;
-	  }
-	</style>
+<meta property="og:url" content="joesuk.github.io/podcast/">
+  <meta property="og:site_name" content="Joe Suk">
+  <meta property="og:title" content="Interview on Differential Privacy in the US Census">
+  <meta property="og:description" content="I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.
+Relevant Links and Sources: Protecting Privacy with MATH: YouTube explanation of differential privacy by Minute Physics. To Reduce Privacy Risks, the Census Plans to Report Less Accurate Data: by Mark Hansen, New York Times. Changes to the Census Could Make Small Towns Disappear: by David van Riper, New York Times Opinion. A History of Census Privacy Protections Timeline Graphic: by the US Census Bureau. 2020 Census Data Products: Disclosure Avoidance Modernization: by the US Census Bureau. Balancing Data Utility and Confidentiality in the 2020 US Census: a living document by danah boyd. Democracy’s Data Infrastructure: by Dan Bouk &amp; danah boyd, Knight Institute and Law and Political Economy Project. The American Census: A Social History: by Margo J. Anderson (2015). Yale University Press. Challenges to the Confidentiality of U.S. Federal Statistics,1910–1965: by Margo J. Anderson. Differntially Private Fair Learning: by Jagielski et al., Proceedings of the 36th International Conference on Machine Learning. Fair decision making using privacy-protected data: by Pujol et al., Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency. Trade-Offs between Fairness, Interpretability, and Privacy in Machine Learning by Sushant Agarwal. Interview Transcript Intro: The United States decennial census undertakes the grand and complicated mission of counting and surveying the nation’s now over 300 million inhabitants. Conducted every ten years, the census hopes to capture the demographic fitness of this vast nation, tabulating the age, sex, race, and ethnicity of every individual from coast to coast, leaving hopefully no person unturned or uncounted or forgotten.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
 
-	<script>
-	document.addEventListener('DOMContentLoaded', function() {
-	 const navLinks = `
-	    <a href="joesuk.github.io/papers">papers</a>
-	    <a href="joesuk.github.io/teaching">teaching</a>
-	    <a href="joesuk.github.io/misc">misc</a>
-	  `;
-	  const socialIcons = `
-	    \x3C!--<a href="mailto:j.suk@nyu.edu">
-	      <span title="mailto link">
-	        <i class="fa-solid fa-envelope faicon"></i>
-	      </span>
-	    </a>-->
-	     <a href="mailto:j.suk@nyu.edu"
-     id="copyEmail"
-     data-email="j.suk@nyu.edu"
-     title="Copy email (⌘/Ctrl+click to open mail app)"
-     aria-label="Copy email address">
-    <i class="fa-solid fa-envelope faicon"></i>
-  </a>
-	      <a href="https://www.linkedin.com/in/joe-suk/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
-    <i class="fa-brands fa-linkedin-in faicon"></i>
-		  </a>
-	    <a href="https://github.com/joesuk">
-	      <span title="my Github">
-	        <i class="fa-brands fa-github faicon"></i>
-	      </span>
-	    </a>
-	    \x3C!--<a href="https://instagram.com/ybjosuk" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener">
-  <i class="fa-brands fa-instagram faicon"></i>
-</a>-->
-	    <a href="https://scholar.google.com/citations?hl=en&user=972KeX4AAAAJ&view_op=list_works&sortby=pubdate">
-	    <span title="Google Scholar">
-	        <i class="ai ai-google-scholar-square ai-3a faicon"></i>
-	    </span>
-	    </a>
-	    \x3C!-- <a href="https://arxiv.org/a/suk_j_1.html">
-	    <span title="my arxiv">
-	        <i class="ai ai-arxiv ai-3x faicon"></i>
-	    </span>
-	    </a>-->
-	    <a href="joesuk.github.io/assets/Joe_Suk_cv.pdf">
-	    <span title="CV">
-	        <i class="ai ai-cv ai-3x faicon"></i>
-	    </span>
-	    </a>
-	  `;
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Interview on Differential Privacy in the US Census">
+  <meta name="twitter:description" content="I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.
+Relevant Links and Sources: Protecting Privacy with MATH: YouTube explanation of differential privacy by Minute Physics. To Reduce Privacy Risks, the Census Plans to Report Less Accurate Data: by Mark Hansen, New York Times. Changes to the Census Could Make Small Towns Disappear: by David van Riper, New York Times Opinion. A History of Census Privacy Protections Timeline Graphic: by the US Census Bureau. 2020 Census Data Products: Disclosure Avoidance Modernization: by the US Census Bureau. Balancing Data Utility and Confidentiality in the 2020 US Census: a living document by danah boyd. Democracy’s Data Infrastructure: by Dan Bouk &amp; danah boyd, Knight Institute and Law and Political Economy Project. The American Census: A Social History: by Margo J. Anderson (2015). Yale University Press. Challenges to the Confidentiality of U.S. Federal Statistics,1910–1965: by Margo J. Anderson. Differntially Private Fair Learning: by Jagielski et al., Proceedings of the 36th International Conference on Machine Learning. Fair decision making using privacy-protected data: by Pujol et al., Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency. Trade-Offs between Fairness, Interpretability, and Privacy in Machine Learning by Sushant Agarwal. Interview Transcript Intro: The United States decennial census undertakes the grand and complicated mission of counting and surveying the nation’s now over 300 million inhabitants. Conducted every ten years, the census hopes to capture the demographic fitness of this vast nation, tabulating the age, sex, race, and ethnicity of every individual from coast to coast, leaving hopefully no person unturned or uncounted or forgotten.">
 
-	  const navContainer = document.querySelector('.header-nav');
-	  const socialContainer = document.querySelector('.social-icons');
 
-	  if (navContainer) {
-	    navContainer.innerHTML = navLinks;
-	  }
-	  if (socialContainer) {
-	    socialContainer.innerHTML = socialIcons;
-	  }
-	if (socialContainer) {
-  socialContainer.innerHTML = socialIcons;
-
+  <meta itemprop="name" content="Interview on Differential Privacy in the US Census">
+  <meta itemprop="description" content="I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.
+Relevant Links and Sources: Protecting Privacy with MATH: YouTube explanation of differential privacy by Minute Physics. To Reduce Privacy Risks, the Census Plans to Report Less Accurate Data: by Mark Hansen, New York Times. Changes to the Census Could Make Small Towns Disappear: by David van Riper, New York Times Opinion. A History of Census Privacy Protections Timeline Graphic: by the US Census Bureau. 2020 Census Data Products: Disclosure Avoidance Modernization: by the US Census Bureau. Balancing Data Utility and Confidentiality in the 2020 US Census: a living document by danah boyd. Democracy’s Data Infrastructure: by Dan Bouk &amp; danah boyd, Knight Institute and Law and Political Economy Project. The American Census: A Social History: by Margo J. Anderson (2015). Yale University Press. Challenges to the Confidentiality of U.S. Federal Statistics,1910–1965: by Margo J. Anderson. Differntially Private Fair Learning: by Jagielski et al., Proceedings of the 36th International Conference on Machine Learning. Fair decision making using privacy-protected data: by Pujol et al., Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency. Trade-Offs between Fairness, Interpretability, and Privacy in Machine Learning by Sushant Agarwal. Interview Transcript Intro: The United States decennial census undertakes the grand and complicated mission of counting and surveying the nation’s now over 300 million inhabitants. Conducted every ten years, the census hopes to capture the demographic fitness of this vast nation, tabulating the age, sex, race, and ethnicity of every individual from coast to coast, leaving hopefully no person unturned or uncounted or forgotten.">
+  <meta itemprop="wordCount" content="9805">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<script defer>
+document.addEventListener('DOMContentLoaded', () => {
   
-  const copyEl = document.getElementById('copyEmail');
-  if (copyEl) {
-    copyEl.addEventListener('click', async (e) => {
-      if (e.metaKey || e.ctrlKey) return; 
-      e.preventDefault();
-      const email = copyEl.dataset.email;
+  document.addEventListener('click', async (e) => {
+    const link = e.target.closest('a.email-copy');
+    if (!link) return;
 
-      try {
-        await navigator.clipboard.writeText(email);
-        copyEl.title = 'Copied!';
-      } catch {
-        
-        const ta = document.createElement('textarea');
-        ta.value = email;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        copyEl.title = 'Copied!';
-      }
+    
+    if (e.ctrlKey || e.metaKey || e.button === 1) return;
 
+    
+    e.preventDefault();
+    const email = link.dataset.email;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      link.title = 'Copied!';
+    } catch {
       
-      setTimeout(() => (copyEl.title = 'Copy email (⌘/Ctrl+click to open mail app)'), 1500);
-    });
-  }
-}
+      const ta = document.createElement('textarea');
+      ta.value = email;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      link.title = 'Copied!';
+    }
 
-	});
-	</script>
+    
+    setTimeout(() => {
+      link.title = 'Copy email (⌘/Ctrl+click to open mail app)';
+    }, 1500);
+  }, false);
+});
+</script>
 
 </head>
+<script defer>
+
+
+const persianRegex = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF\u200B\u200D\u2060\u0020]/g;
+
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll(`
+    .markdown p,
+    .markdown h1,
+    .markdown h2,
+    .markdown h3,
+    .markdown h4,
+    .markdown h5,
+    .markdown h6,
+    .markdown li,
+    .markdown blockquote,
+    .markdown dd,
+    .markdown dt,
+    .markdown td,
+    .markdown th,
+    pre,
+    .post-header
+  `);
+
+
+  elements.forEach(el => {
+    if (!el.textContent) {
+      return;
+    }
+    const isFirstPersian = el.textContent[0].match(persianRegex) !== null;
+    const persianNumberOfLetterMatches = Array.from(el.textContent.matchAll(persianRegex)).length * (isFirstPersian ? 1.2 : 1.0);
+    const hasPersian = persianNumberOfLetterMatches >= (el.textContent.length / 2.0);
+
+    el.style.direction = hasPersian ? 'rtl' : 'ltr';
+    el.style.textAlign = hasPersian ? 'right' : 'left';
+
+    if (el.tagName.match(/^H[1-6]$/)) {
+      el.style.marginRight = hasPersian ? '1rem' : '-1';
+      el.style.marginLeft = hasPersian ? '0' : '1rem';
+    }
+  });
+});
+</script>
 <body>
-<main>
-<header style="padding: 2rem 0;">
-  <h1 style="margin: 0; color: #57068c;">Differential Privacy in the US Census</h1>
+<header>
+  <div class="top-header-row">
+    <div id="avatar">
+      <a href="joesuk.github.io/"><img src="joesuk.github.io/img/me.jpeg" alt="Joe Suk"></a>
+    </div>
+
+	  <div class="right-col">
+      <div id="titletext">
+            <h2 id="titleonly"><a href="joesuk.github.io/">Joe Suk</a></h2>
+      </div>
+
+
+      
+      <div id="title-social">
+        <div id="social">
+          <nav>
+            <ul>  
+                    <li>
+                      <a href="https://www.linkedin.com/in/joe-suk/" rel="me" aria-label="Linkedin">
+                        <span title="Linkedin" class="icons fa-brands fa-linkedin-in faicon" aria-hidden="true"></span>
+                      </a>
+                    </li>  
+                    <li>
+                      <a href="https://github.com/joesuk" rel="me" aria-label="Github">
+                        <span title="Github" class="icons fab fa-github faicon" aria-hidden="true"></span>
+                      </a>
+                    </li>  
+                    <li>
+                      <a href="https://scholar.google.com/citations?hl=en&amp;user=972KeX4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate" rel="me" aria-label="Google Scholar">
+                        <span title="Google Scholar" class="icons ai ai-google-scholar-square ai-3a faicon" aria-hidden="true"></span>
+                      </a>
+                    </li>  
+                    <li>
+                      <a href="joesuk.github.io/assets/Joe_Suk_cv.pdf" rel="me" aria-label="CV">
+                        <span title="CV" class="icons ai ai-cv ai-3x faicon" aria-hidden="true"></span>
+                      </a>
+                    </li>
+
+              <li>
+                <button id="dark-mode" aria-label="Switch Dark Mode">
+                  <span title="Switch Dark Mode" class="icons fas fa-moon faicon" aria-hidden="true"></span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+
+    </div> 
+  </div> 
+  <div id="mainmenu">
+    <nav>
+      <ul>
+        <li><a href="joesuk.github.io/">home</a></li>
+        <li><a href="joesuk.github.io/papers">papers</a></li>
+        <li><a href="joesuk.github.io/teaching">teaching</a></li>
+        <li><a href="joesuk.github.io/misc">misc</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+<main>
+<div class="post" dir="auto">
 <article>
-<hr>
+<div class="post-header">
+<div class="matter" dir="auto">
+<h1 class="title">Interview on Differential Privacy in the US Census</h1>
+<p class="post-meta" dir="auto">
+<span class="post-meta">
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
 <p>I talk with David van Riper, Director of Spatial Analysis at the Minnesota Population Center, about the implementation of differential privacy techniques in the 2020 US Census. We discuss some of the new issues demographers and researchers dependent on the census will face this decade and the intricate tradeoffs inherent in designing a census which is both accurate and confidential.</p>
 <h3 id="relevant-links-and-sources">Relevant Links and Sources:</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=pT19VwBAqKA">Protecting Privacy with MATH</a>: YouTube explanation of differential privacy by Minute Physics.</li>
-<li><a href="https://www.nytimes.com/2018/12/05/upshot/to-reduce-privacy-risks-the-census-plans-to-report-less-accurate-data.html">To Reduce Privacy Risks, the Census Plans to Report Less Accurate Data</a>: by Mark Hansen, <em>New York Times</em>.</li>
-<li><a href="https://www.nytimes.com/interactive/2020/02/06/opinion/census-algorithm-privacy.html">Changes to the Census Could Make Small Towns Disappear</a>: by David van Riper, <em>New York Times</em> Opinion.</li>
-<li><a href="https://www.census.gov/content/census/en/library/visualizations/2019/comm/history-privacy-protection/jcr:content/map.detailitem.950.high.jpg/1581597986273.jpg">A History of Census Privacy Protections Timeline Graphic</a>: by the US Census Bureau.</li>
-<li><a href="https://www.census.gov/programs-surveys/decennial-census/2020-census/planning-management/2020-census-data-products.html">2020 Census Data Products: Disclosure Avoidance Modernization</a>: by the US Census Bureau.</li>
-<li><a href="https://datasociety.net/wp-content/uploads/2019/12/Differential-Privacy-04_27_20.pdf">Balancing Data Utility and Confidentiality in the 2020 US Census</a>: a living document by danah boyd.</li>
-<li><a href="https://knightcolumbia.org/content/democracys-data-infrastructure">Democracy&rsquo;s Data Infrastructure</a>: by Dan Bouk &amp; danah boyd, Knight Institute and Law and Political Economy Project.</li>
+<li><a href="https://www.youtube.com/watch?v=pT19VwBAqKA" target="_blank">Protecting Privacy with MATH</a>: YouTube explanation of differential privacy by Minute Physics.</li>
+<li><a href="https://www.nytimes.com/2018/12/05/upshot/to-reduce-privacy-risks-the-census-plans-to-report-less-accurate-data.html" target="_blank">To Reduce Privacy Risks, the Census Plans to Report Less Accurate Data</a>: by Mark Hansen, <em>New York Times</em>.</li>
+<li><a href="https://www.nytimes.com/interactive/2020/02/06/opinion/census-algorithm-privacy.html" target="_blank">Changes to the Census Could Make Small Towns Disappear</a>: by David van Riper, <em>New York Times</em> Opinion.</li>
+<li><a href="https://www.census.gov/content/census/en/library/visualizations/2019/comm/history-privacy-protection/jcr:content/map.detailitem.950.high.jpg/1581597986273.jpg" target="_blank">A History of Census Privacy Protections Timeline Graphic</a>: by the US Census Bureau.</li>
+<li><a href="https://www.census.gov/programs-surveys/decennial-census/2020-census/planning-management/2020-census-data-products.html" target="_blank">2020 Census Data Products: Disclosure Avoidance Modernization</a>: by the US Census Bureau.</li>
+<li><a href="https://datasociety.net/wp-content/uploads/2019/12/Differential-Privacy-04_27_20.pdf" target="_blank">Balancing Data Utility and Confidentiality in the 2020 US Census</a>: a living document by danah boyd.</li>
+<li><a href="https://knightcolumbia.org/content/democracys-data-infrastructure" target="_blank">Democracy’s Data Infrastructure</a>: by Dan Bouk &amp; danah boyd, Knight Institute and Law and Political Economy Project.</li>
 <li>The American Census: A Social History: by Margo J. Anderson (2015). <em>Yale University Press</em>.</li>
-<li><a href="https://www.scb.se/contentassets/ff271eeeca694f47ae99b942de61df83/challenges-to-the-confidentiality-of-u.s.-federal-statistics-1910-1965.pdf">Challenges to the Confidentiality of U.S. Federal Statistics,1910–1965</a>: by Margo J. Anderson.</li>
-<li><a href="http://proceedings.mlr.press/v97/jagielski19a/jagielski19a.pdf">Differntially Private Fair Learning</a>: by Jagielski <em>et al.</em>, <em>Proceedings of the 36th International Conference on Machine Learning</em>.</li>
-<li><a href="https://arxiv.org/pdf/1905.12744.pdf">Fair decision making using privacy-protected data</a>: by Pujol <em>et al.</em>, <em>Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</em>.</li>
-<li><a href="https://uwspace.uwaterloo.ca/bitstream/handle/10012/15861/Agarwal_Sushant.pdf?sequence=3&amp;isAllowed=y">Trade-Offs between Fairness, Interpretability, and Privacy in Machine Learning</a> by Sushant Agarwal.</li>
+<li><a href="https://www.scb.se/contentassets/ff271eeeca694f47ae99b942de61df83/challenges-to-the-confidentiality-of-u.s.-federal-statistics-1910-1965.pdf" target="_blank">Challenges to the Confidentiality of U.S. Federal Statistics,1910–1965</a>: by Margo J. Anderson.</li>
+<li><a href="http://proceedings.mlr.press/v97/jagielski19a/jagielski19a.pdf" target="_blank">Differntially Private Fair Learning</a>: by Jagielski <em>et al.</em>, <em>Proceedings of the 36th International Conference on Machine Learning</em>.</li>
+<li><a href="https://arxiv.org/pdf/1905.12744.pdf" target="_blank">Fair decision making using privacy-protected data</a>: by Pujol <em>et al.</em>, <em>Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</em>.</li>
+<li><a href="https://uwspace.uwaterloo.ca/bitstream/handle/10012/15861/Agarwal_Sushant.pdf?sequence=3&amp;isAllowed=y" target="_blank">Trade-Offs between Fairness, Interpretability, and Privacy in Machine Learning</a> by Sushant Agarwal.</li>
 </ul>
 <h3 id="interview-transcript">Interview Transcript</h3>
 <p><strong>Intro</strong>: The United States decennial census undertakes the grand and complicated mission of counting and surveying the nation&rsquo;s now over 300 million inhabitants. Conducted every ten years, the census hopes to capture the demographic fitness of this vast nation, tabulating the age, sex, race, and ethnicity of every individual from coast to coast, leaving hopefully no person unturned or uncounted or forgotten.</p>
@@ -302,14 +321,11 @@ Intro: The United States decennial census undertakes the grand and complicated m
 <p><strong>Joe</strong>: Okay, great. Thank you.</p>
 </details>
 
-
+</div>
+</div>
 </article>
-</main>
-<footer>
-	
-	<a href="joesuk.github.io/">Home</a><br><br>
-	
-</footer>
+</div>
+</main><script src="joesuk.github.io/js/dark-mode.js"></script>
+
 </body>
 </html>
-

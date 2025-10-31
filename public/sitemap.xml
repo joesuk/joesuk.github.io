@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>joesuk.github.io/homepage/</loc>
+  </url><url>
     <loc>joesuk.github.io/categories/</loc>
   </url><url>
     <loc>joesuk.github.io/review/</loc>
@@ -14,8 +16,12 @@
   </url><url>
     <loc>joesuk.github.io/papers/</loc>
   </url><url>
-    <loc>joesuk.github.io/teaching/</loc>
+    <loc>joesuk.github.io/series/</loc>
   </url><url>
     <loc>joesuk.github.io/tags/</loc>
+  </url><url>
+    <loc>joesuk.github.io/talks/</loc>
+  </url><url>
+    <loc>joesuk.github.io/teaching/</loc>
   </url>
 </urlset>
