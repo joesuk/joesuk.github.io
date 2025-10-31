@@ -39,7 +39,7 @@ googleAnalytics = ""
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "img/me.jpeg"
+	avatar = "img/me.jpg"
 
 	# Optional favicons for website
 	#favicon = true
@@ -173,9 +173,9 @@ url = "/assets/Joe_Suk_cv.pdf"
 #url = "index.xml"
 
 # Navigation
-[params.navigation]
+#[params.navigation]
 #other stuff
-logo = "img/me.png"
+#logo = "img/me.png"
 
 # markup stuff needed for html
 [markup]
