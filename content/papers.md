@@ -10,9 +10,9 @@ hidden = false
 Joe Suk, Yaqi Duan.\
 *NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models*
 
-2. An Efficient Variant of One-Class SVM with Lifelong Online Learning Guarantees.\
+2. [An Efficient Variant of One-Class SVM with Lifelong Online Learning Guarantees](https://arxiv.org/abs/2512.11052).\
 Joe Suk, Samory Kpotufe.\
-*Preprint in Preparation*
+*In Submission*
 
 3. [Tracking Most Significant Shifts in Infinite-Armed Bandits](https://arxiv.org/pdf/2502.00108)\
 Joe Suk, Jung-hun Kim.\
