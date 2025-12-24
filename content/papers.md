@@ -12,7 +12,9 @@ Joe Suk, Yaqi Duan.\
 
 2. [An Efficient Variant of One-Class SVM with Lifelong Online Learning Guarantees](https://arxiv.org/abs/2512.11052).\
 Joe Suk, Samory Kpotufe.\
-*In Submission*
+*In Submission*\
+[\[code\]](https://github.com/joesuk/SONAR)
+
 
 3. [Tracking Most Significant Shifts in Infinite-Armed Bandits](https://arxiv.org/pdf/2502.00108)\
 Joe Suk, Jung-hun Kim.\
