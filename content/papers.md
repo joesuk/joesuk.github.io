@@ -15,7 +15,6 @@ Joe Suk, Samory Kpotufe.\
 *In Submission*\
 [\[code\]](https://github.com/joesuk/SONAR)
 
-
 3. [Tracking Most Significant Shifts in Infinite-Armed Bandits](https://arxiv.org/pdf/2502.00108)\
 Joe Suk, Jung-hun Kim.\
 *ICML 2025*\
